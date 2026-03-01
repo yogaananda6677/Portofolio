@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learning Objectives — Yoga, Semester 4</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', sans-serif; background: #f0f4ff; color: #1e1e2e; min-height: 100vh; padding: 24px; }
+  header { text-align: center; margin-bottom: 32px; }
+  header h1 { font-size: 1.8rem; color: #3b3b98; }
+  header p { color: #666; margin-top: 6px; font-size: 0.95rem; }
+  .progress-bar-wrapper { background: #dde1f7; border-radius: 20px; height: 12px; margin: 12px auto; max-width: 400px; }
+  .progress-bar { height: 12px; border-radius: 20px; background: linear-gradient(90deg, #3b3b98, #6c63ff); transition: width 0.4s; }
+  .progress-label { text-align: center; font-size: 0.85rem; color: #555; margin-top: 4px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; }
+  .card { background: white; border-radius: 16px; padding: 20px; box-shadow: 0 4px 16px rgba(60,60,150,0.08); border-top: 5px solid; }
+  .card h2 { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+  .card .subtitle { font-size: 0.78rem; color: #888; margin-bottom: 14px; }
+  .obj { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; cursor: pointer; }
+  .obj input[type="checkbox"] { margin-top: 3px; accent-color: #3b3b98; width: 16px; height: 16px; flex-shrink: 0; cursor: pointer; }
+  .obj label { font-size: 0.875rem; line-height: 1.45; cursor: pointer; }
+  .obj.done label { text-decoration: line-through; color: #aaa; }
+  .card-progress { font-size: 0.75rem; color: #888; margin-top: 12px; text-align: right; }
+
+  /* Colors per card */
+  .c1 { border-color: #3b3b98; }
+  .c2 { border-color: #e67e22; }
+  .c3 { border-color: #27ae60; }
+  .c4 { border-color: #e74c3c; }
+  .c5 { border-color: #8e44ad; }
+  .c6 { border-color: #2980b9; }
+
+  .reset-btn { display: block; margin: 28px auto 0; padding: 10px 28px; background: #3b3b98; color: white; border: none; border-radius: 10px; cursor: pointer; font-size: 0.9rem; }
+  .reset-btn:hover { background: #6c63ff; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎯 Learning Objectives — Yoga</h1>
+  <p>Semester 4 · Intermediate Level · 6 Mata Kuliah</p>
+  <div class="progress-bar-wrapper">
+    <div class="progress-bar" id="globalBar" style="width:0%"></div>
+  </div>
+  <div class="progress-label" id="globalLabel">0 dari 0 objectives selesai</div>
+</header>
+
+<div class="grid" id="cardGrid">
+
+  <div class="card c1">
+    <h2>🗄️ Database Administrator</h2>
+    <div class="subtitle">Manajemen & Optimasi Database</div>
+    <div class="obj"><input type="checkbox"><label>Merancang skema database yang efisien menggunakan normalisasi (1NF–3NF)</label></div>
+    <div class="obj"><input type="checkbox"><label>Mengimplementasikan stored procedure, trigger, dan view untuk otomasi database</label></div>
+    <div class="obj"><input type="checkbox"><label>Melakukan backup, recovery, dan manajemen user/privilege pada DBMS</label></div>
+    <div class="obj"><input type="checkbox"><label>Menganalisis dan mengoptimasi query menggunakan indexing dan query plan</label></div>
+    <div class="obj"><input type="checkbox"><label>Memahami konsep replikasi dan high availability database</label></div>
+    <div class="card-progress"></div>
+  </div>
+
+  <div class="card c2">
+    <h2>📊 Data Science</h2>
+    <div class="subtitle">Analisis Data dengan Python</div>
+    <div class="obj"><input type="checkbox"><label>Melakukan preprocessing data: handling missing values, encoding, dan normalisasi</label></div>
+    <div class="obj"><input type="checkbox"><label>Menggunakan Pandas & NumPy untuk eksplorasi dan transformasi dataset</label></div>
+    <div class="obj"><input type="checkbox"><label>Membangun model machine learning dasar (regresi, klasifikasi) menggunakan scikit-learn</label></div>
+    <div class="obj"><input type="checkbox"><label>Membuat visualisasi data yang informatif dengan Matplotlib atau Seaborn</label></div>
+    <div class="obj"><input type="checkbox"><label>Mengevaluasi performa model menggunakan metrik yang tepat (accuracy, F1, RMSE)</label></div>
+    <div class="card-progress"></div>
+  </div>
+
+  <div class="card c3">
+    <h2>📐 Statistika</h2>
+    <div class="subtitle">Fondasi Analisis Kuantitatif</div>
+    <div class="obj"><input type="checkbox"><label>Memahami distribusi data dan ukuran tendensi sentral (mean, median, modus, varians)</label></div>
+    <div class="obj"><input type="checkbox"><label>Melakukan uji hipotesis (t-test, chi-square, ANOVA) dan menginterpretasikan hasilnya</label></div>
+    <div class="obj"><input type="checkbox"><label>Menerapkan konsep probabilitas dan distribusi (normal, binomial, Poisson)</label></div>
+    <div class="obj"><input type="checkbox"><label>Menganalisis korelasi dan regresi linier antar variabel</label></div>
+    <div class="obj"><input type="checkbox"><label>Mengaplikasikan statistika inferensial untuk pengambilan keputusan berbasis data</label></div>
+    <div class="card-progress"></div>
+  </div>
+
+  <div class="card c4">
+    <h2>🚀 Proyek 1</h2>
+    <div class="subtitle">Pengembangan Proyek Nyata</div>
+    <div class="obj"><input type="checkbox"><label>Mendefinisikan kebutuhan proyek melalui analisis masalah dan user requirement</label></div>
+    <div class="obj"><input type="checkbox"><label>Membuat dokumentasi teknis: ERD, flowchart, dan wireframe/prototype</label></div>
+    <div class="obj"><input type="checkbox"><label>Mengintegrasikan skill Python/Laravel/Design dalam satu produk yang fungsional</label></div>
+    <div class="obj"><input type="checkbox"><label>Menerapkan manajemen proyek dasar (timeline, pembagian tugas, version control dengan Git)</label></div>
+    <div class="obj"><input type="checkbox"><label>Mempresentasikan dan mempertahankan hasil proyek secara profesional</label></div>
+    <div class="card-progress"></div>
+  </div>
+
+  <div class="card c5">
+    <h2>📱 Pemrograman Mobile (Kotlin)</h2>
+    <div class="subtitle">Pengembangan Aplikasi Android</div>
+    <div class="obj"><input type="checkbox"><label>Memahami struktur proyek Android dan lifecycle Activity/Fragment</label></div>
+    <div class="obj"><input type="checkbox"><label>Membangun UI dengan XML Layout dan Jetpack Compose dasar</label></div>
+    <div class="obj"><input type="checkbox"><label>Mengimplementasikan navigasi antar screen dan passing data antar komponen</label></div>
+    <div class="obj"><input type="checkbox"><label>Melakukan HTTP request ke REST API menggunakan Retrofit atau Ktor</label></div>
+    <div class="obj"><input type="checkbox"><label>Menyimpan data lokal menggunakan Room Database atau SharedPreferences</label></div>
+    <div class="card-progress"></div>
+  </div>
+
+  <div class="card c6">
+    <h2>🌐 Manajemen Jaringan Komputer</h2>
+    <div class="subtitle">Infrastruktur & Keamanan Jaringan</div>
+    <div class="obj"><input type="checkbox"><label>Memahami model OSI dan TCP/IP serta fungsi setiap layer-nya</label></div>
+    <div class="obj"><input type="checkbox"><label>Mengkonfigurasi routing (static & dynamic) dan switching pada perangkat jaringan</label></div>
+    <div class="obj"><input type="checkbox"><label>Memantau jaringan menggunakan tools seperti Wireshark, SNMP, atau Zabbix</label></div>
+    <div class="obj"><input type="checkbox"><label>Menerapkan konsep keamanan jaringan: firewall, VPN, dan access control</label></div>
+    <div class="obj"><input type="checkbox"><label>Merancang topologi jaringan yang scalable untuk kebutuhan organisasi kecil</label></div>
+    <div class="card-progress"></div>
+  </div>
+
+</div>
+
+<button class="reset-btn" onclick="resetAll()">🔄 Reset Semua</button>
+
+<script>
+  const STORAGE_KEY = 'yoga_s4_objectives';
+
+  function saveState() {
+    const checks = [...document.querySelectorAll('input[type="checkbox"]')].map(c => c.checked);
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(checks));
+  }
+
+  function loadState() {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return;
+    const checks = JSON.parse(saved);
+    document.querySelectorAll('input[type="checkbox"]').forEach((c, i) => {
+      c.checked = checks[i] || false;
+      c.closest('.obj').classList.toggle('done', c.checked);
+    });
+  }
+
+  function updateProgress() {
+    const cards = document.querySelectorAll('.card');
+    let totalAll = 0, doneAll = 0;
+
+    cards.forEach(card => {
+      const boxes = card.querySelectorAll('input[type="checkbox"]');
+      const done = [...boxes].filter(b => b.checked).length;
+      totalAll += boxes.length;
+      doneAll += done;
+      const pct = Math.round((done / boxes.length) * 100);
+      card.querySelector('.card-progress').textContent = `${done}/${boxes.length} selesai (${pct}%)`;
+    });
+
+    const globalPct = totalAll ? Math.round((doneAll / totalAll) * 100) : 0;
+    document.getElementById('globalBar').style.width = globalPct + '%';
+    document.getElementById('globalLabel').textContent = `${doneAll} dari ${totalAll} objectives selesai (${globalPct}%)`;
+  }
+
+  function resetAll() {
+    if (!confirm('Reset semua progress?')) return;
+    document.querySelectorAll('input[type="checkbox"]').forEach(c => {
+      c.checked = false;
+      c.closest('.obj').classList.remove('done');
+    });
+    localStorage.removeItem(STORAGE_KEY);
+    updateProgress();
+  }
+
+  document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+    cb.addEventListener('change', () => {
+      cb.closest('.obj').classList.toggle('done', cb.checked);
+      updateProgress();
+      saveState();
+    });
+  });
+
+  loadState();
+  updateProgress();
+</script>
+</body>
+</html>
